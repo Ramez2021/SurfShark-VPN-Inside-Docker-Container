@@ -1,0 +1,58 @@
+VPN Credentials 
+
+ziegertro@gmail.com
+pCZQo@8vXvN358
+
+
+1 - how to install surfshark inside container ?        					# ok 
+2 - how to automate running and rotate surshark ip ?
+3 - how to run the two python scripts inside docker container ?
+4 - is there stability issue will happen if we use surfshark with scraping script ?
+
+-- >> Install ubinto Linux for try surshark in Linux env 
+
+
+openvpn credintials 
+
+user : KwWYP9wAp2cFGeCQVb7TAKUx
+pass : MhvswcwyUrd6bzTpkFzhnLfy
+
+
+best OpenVPN configurations files located in Germany is :
+
+- de-fra.prod.surfshark.com_tcp.ovpn (Frankfurt)
+- de-ber.prod.surfshark.com_tcp.ovpn (Berlin)
+
+
+
+openvpn de-ber.prod.surfshark.com_tcp.ovpn
+
+for running docker image for vpn rotations you should use :
+docker run --dns=8.8.8.8 --cap-add=NET_ADMIN --device=/dev/net/tun --name=auto_vpn -it auto_vpn:v1
+
+156.174.42.206#
+156.174.42.206#
+
+89.36.76.124#
+
+217.138.216.230#
+89.36.76.118#
+
+
+
+152.89.163.246
+152.89.163.246
+
+
+ 89.36.76.52
+ 91.239.157.219
+
+docker run --dns=162.252.172.57 --dns=149.154.159.92 --cap-add=NET_ADMIN --device=/dev/net/tun --name=auto_vpn -it auto_vpn:v1
+
+
+
+
+docker build -t market_monitor_vpn .
+docker run --dns=8.8.8.8 --dns=1.1.1.1 --cap-add=NET_ADMIN --device=/dev/net/tun --name=market_monitor_vpn -it --memory=2g --cpus=4 market_monitor_vpn
+docker rm market_monitor_vpn
+
