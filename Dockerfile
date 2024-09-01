@@ -33,11 +33,3 @@ COPY . .
 
 # Define the command to run your script when the container starts
 CMD ["python","setup_vpn.py"]
-
-
-
-# # Copy the script to the Docker image
-# COPY setup_vpn.sh /usr/local/bin/setup_vpn.sh
-
-# # Make the script executable
-# RUN chmod +x /usr/local/bin/setup_vpn.sh
